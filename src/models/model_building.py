@@ -54,7 +54,7 @@ def main():
     
     n_estimators, learning_rate = load_params('params.yaml')
     
-    data_path = 'data/features/train_bow.csv'
+    data_path = 'data/processed/train_bow.csv'
     
     X_train, y_train = load_data(data_path)
     
@@ -63,7 +63,7 @@ def main():
     fitted_model = train_model(model, X_train, y_train)
     
     
-    model_location = 'model.pkl'
+    model_location = 'models/model.pkl'
     
     pickling(model_location,fitted_model)
     

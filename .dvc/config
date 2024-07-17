@@ -1,0 +1,4 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = C:\Users\Asus\AppData\Local\Temp\emotion_detection_storage

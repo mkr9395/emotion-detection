@@ -128,7 +128,7 @@ def main():
         train_processed_data = normalize_text(train_data)
         test_processed_data = normalize_text(test_data)
         
-        joined_path = Path.joinpath(Path.cwd() / 'data'/'processed')
+        joined_path = Path.joinpath(Path.cwd() / 'data'/'interim')
         
         store_data(joined_path, train_processed_data, test_processed_data)
         

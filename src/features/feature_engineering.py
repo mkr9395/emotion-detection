@@ -83,8 +83,8 @@ def main():
     
     max_features = load_params('params.yaml')
     
-    train_data_path = 'data/processed/train_processed.csv'
-    test_data_path = 'data/processed/test_processed.csv'
+    train_data_path = 'data/interim/train_processed.csv'
+    test_data_path = 'data/interim/test_processed.csv'
     
     train_data, test_data = fetch_data(train_data_path,test_data_path)
     
@@ -97,7 +97,7 @@ def main():
     
     train_df , test_df = feature_engineering(vectorizer, X_train, X_test,y_train, y_test)
     
-    joined_path = Path.joinpath(Path.cwd() / 'data'/'features')
+    joined_path = Path.joinpath(Path.cwd() / 'data'/'processed')
     
     save_data(joined_path, train_df , test_df)
     

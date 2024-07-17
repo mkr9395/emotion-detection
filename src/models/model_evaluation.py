@@ -72,11 +72,11 @@ def save_metrics_to_json(metrics_dict: dict, json_path: str) -> None:
 
 def main():
     
-    data_path = 'data/features/test_bow.csv'
+    data_path = 'data/processed/test_bow.csv'
     
     X_test, y_test = load_data(data_path)
     
-    model_path = 'model.pkl'
+    model_path = 'models/model.pkl'
     model = load_model(model_path)
     
     y_pred, y_pred_proba = model_prediction(model,X_test)
